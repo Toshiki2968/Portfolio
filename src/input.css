@@ -11,9 +11,9 @@ body {
   @apply text-3xl font-bold;
 }
 
-.secondary-title::before {
+.secondary-title::after {
   content: "";
-  @apply block w-12 h-2 bg-theme rounded-full mb-1;
+  @apply block w-12 h-1 bg-main rounded-full mb-1;
 }
 
 .section-paragraph {
