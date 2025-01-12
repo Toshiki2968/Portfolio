@@ -8,12 +8,12 @@ body {
 }
 
 .secondary-title {
-  @apply text-3xl font-bold;
+  @apply text-3xl font-bold text-secondary-title;
 }
 
 .secondary-title::after {
   content: "";
-  @apply block w-12 h-1 bg-main rounded-full mb-1;
+  @apply block w-12 h-1 bg-main rounded-full mb-5;
 }
 
 .section-paragraph {
@@ -21,5 +21,5 @@ body {
 }
 
 .badge {
-  @apply px-4 py-2 text-sm bg-badge;
+  @apply px-2 py-1 text-sm bg-badge rounded-md text-badge-text;
 }
