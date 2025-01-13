@@ -1,181 +1,156 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/dist/output.css" rel="stylesheet" />
-    <title>Toshiki's Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body class="font-poppins bg-white text-black">
-    <!-- ナビゲーションバー -->
-    <header class="py-6 bg-main text-white fixed top-0 left-0 right-0">
-      <div
-        class="container mx-auto flex justify-between items-center px-8 md:px-14 lg:px-24 w-full"
-      >
-        <div class="text-lg font-bold">Toshiki Sumiya</div>
-        <div class="space-x-12 hidden md:flex items-center">
-          <a
-            href="#home"
-            class="hover:text-selected-text transition-all duration-300"
-            >Home</a
-          >
-          <a
-            href="#About"
-            class="hover:text-selected-text transition-all duration-300"
-            >About</a
-          >
-          <!-- <a
-            href="#portforio"
-            class="hover:text-selected-text transition-all duration-300"
-            >Portfolio</a
-          > -->
-          <a
-            href="#skills"
-            class="hover:text-selected-text transition-all duration-300"
-            >Skills</a
-          >
-          <a
-            href="#contact"
-            class="hover:text-selected-text transition-all duration-300"
-            >Contact</a
-          >
-        </div>
-        <div class="md:hidden">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/dist/output.css" rel="stylesheet" />
+  <title>Toshiki's Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="font-poppins bg-white text-black">
+  <!-- ナビゲーションバー -->
+  <header class="py-6 bg-main text-white fixed top-0 left-0 right-0">
+    <div class="container mx-auto flex justify-between items-center px-8 md:px-14 lg:px-24 w-full">
+      <div class="text-lg font-bold">Toshiki Sumiya</div>
+      <div class="space-x-12 hidden md:flex items-center">
+        <a href="#home" class="hover:text-selected-text transition-all duration-300">Home</a>
+        <a href="#about" class="hover:text-selected-text transition-all duration-300">About</a>
+        <a href="#skills" class="hover:text-selected-text transition-all duration-300">Skills</a>
+        <a href="#contact" class="hover:text-selected-text transition-all duration-300">Contact</a>
+      </div>
+      <nav class="md:hidden relative">
+        <button id="menu-button" class="text-white text-2xl focus:outline-none">
           <i class="fa-solid fa-bars"></i>
+        </button>
+        <div id="mobile-menu"
+          class="fixed top-0 right-0 h-full bg-main bg-opacity-50 w-64 transform translate-x-full transition-transform duration-300">
+          <button id="close-button" class="absolute top-4 left-4 text-white text-2xl">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <ul class="mt-16 space-y-6 text-center">
+            <li><a href="#home" class="text-white block py-2">Home</a></li>
+            <li><a href="#about" class="text-white block py-2">About</a></li>
+            <li><a href="#skills" class="text-white block py-2">Skills</a></li>
+            <li><a href="#contact" class="text-white block py-2">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home -->
+  <section id="home">
+    <div
+      class="font-bold text-5xl md:text-left md:text-6xl lg:text-7xl text-title py-36 mt-16 flex justify-center bg-gradient-to-b from-blue-50 to-blue-200">
+      <h1>TOSHIKI's Portfolio</h1>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about"
+    class="container mt-32 flex items-center mx-auto px-8 md:px-14 lg:px-24 w-full scroll-mt-16 justify-center">
+    <div class="w-full">
+      <h2 class="secondary-title">About</h2>
+      <div class="flex flex-wrap justify-center">
+        <div><img src="/src/images/programmer.png" alt="" /></div>
+        <div class="ml-12">
+          <h2 class="mb-3 text-3xl font-bold text-main">Toshiki Sumiya</h2>
+          大学卒業後、営業やITエンジニアの仕事を経験してきました。<br />
+          2022年6月から受託開発会社でフルスタックエンジニアとして勤務しています。<br />
+          新規システム開発、保守運用などの業務に携わっています。<br />
         </div>
       </div>
-    </header>
+      </dev>
+  </section>
 
-    <main>
-      <!-- ヒーローセクション -->
-      <div
-        id="home"
-        class="container mt-16 flex items-center mx-auto px-8 md:px-14 lg:px-24 w-full"
-      >
-        <div class="flex flex-wrap md:flex-nowrap">
-          <div
-            class="md:my-36 lg:ml-20 justify-center md:justify-start mx-auto max-w-xl flex flex-wrap"
-          >
-            <h1
-              class="font-bold text-5xl text-center md:text-left md:text-6xl lg:text-7xl text-title"
-            >
-              TOSHIKI's Portfolio
-            </h1>
-            <!-- <button
-              class="px-6 py-4 bg-theme font-bold rounded-lg hover:bg-purple-600 transition-all duration-300 mt-10"
-            >
-              <i class="fa-solid fa-rocket mr-1"></i>
-              <span>もっと見る</span>
-            </button> -->
+  <!-- Skills -->
+  <section id="skills"
+    class="container mt-32 flex items-center mx-auto px-8 md:px-14 lg:px-24 w-full scroll-mt-16 justify-center">
+    <div class="w-full">
+      <h2 class="secondary-title">Skills</h2>
+      <div class="flex flex-wrap  justify-center items-center text-center">
+        <div class="mr-16">
+          <div class="mb-10">
+            <h3 class="text-main font-bold mb-6">Front End</h3>
+            <span class="badge">HTML5</span>
+            <span class="badge">CSS3</span>
+            <span class="badge">Javascript</span>
+            <span class="badge">TypeScript</span>
+            <span class="badge">React</span>
           </div>
-          <!-- <img
-            src="./images/human.jpg"
-            alt="human"
-            class="md:absolute lg:top-2 lg:right-52 md:w-3/5 w-10/12 mt-12 md:mt-0 right-6 mx-auto -z-10 lg:w-3/6"
-          /> -->
+          <div>
+            <h3 class="mt-5 text-main font-bold mb-6">Back End</h3>
+            <span class="badge">C#</span>
+            <span class="badge">ASP.Net</span>
+            <span class="badge">PostgreSQL</span>
+            <span class="badge">SQLServer</span>
+            <span class="badge">Azure</span>
+          </div>
+        </div>
+        <div>
+          <img src="/src/images/job_programmer.png" alt="" />
         </div>
       </div>
-      <!-- About -->
-      <section
-        id="about"
-        class="container mt-16 flex items-center mx-auto px-8 md:px-14 lg:px-24 w-full"
-      >
-        <dev class="w-full">
-          <h2 class="secondary-title">About</h2>
-          <div class="flex">
-            <div>画像</div>
-            <div class="ml-12">
-              大学卒業後、営業やITエンジニアの仕事を経験してきました。<br />
-              2022年6月から受託開発会社でフルスタックエンジニアとして勤務しています。<br />
-              新規システム開発、保守運用などの業務に携わっています。<br />
-            </div>
-          </div>
-        </dev>
-      </section>
+    </div>
 
-      <!-- Skills -->
-      <div
-        id="skils"
-        class="container mt-32 flex items-center mx-auto px-8 md:px-14 lg:px-24 w-full"
-      >
-        <section class="w-full">
-          <h2 class="secondary-title">Skills</h2>
-          <div class="flex">
-            <div>
-              <h3 class="text-main font-bold mb-2">Front End</h3>
-              <span class="badge">HTML5</span>
-              <span class="badge">CSS3</span>
-              <span class="badge">Javascript</span>
-              <span class="badge">TypeScript</span>
-              <span class="badge">React</span>
-              <h3 class="mt-5 text-main font-bold mb-2">Back End</h3>
-              <span class="badge">C#</span>
-              <span class="badge">ASP.Net</span>
-              <span class="badge">PostgreSQL</span>
-              <span class="badge">SQLServer</span>
-            </div>
-            <div>画像</div>
-          </div>
-        </section>
-      </div>
+  </section>
 
-      <!-- Contact -->
-      <div
-        id="contact"
-        class="container mt-32 mb-20 flex items-center mx-auto px-8 md:px-14 lg:px-24 w-full"
-      >
-        <section class="w-full">
-          <h2 class="secondary-title">Contact</h2>
-          <div class="w-full grid lg:grid-cols-2 gap-8 lg:gap-32">
-            <div class="space-y-7">
-              <div>
-                <label class="block mb-3 text-lg font-bold">お名前</label
-                ><input
-                  type="text"
-                  class="w-full border border-inputBorder px-3 py-3"
-                  placeholder="山田 花子"
-                />
-              </div>
-              <div>
-                <label class="block mb-3 text-lg font-bold"
-                  >メールアドレス</label
-                ><input
-                  type="text"
-                  class="w-full border border-inputBorder px-3 py-3"
-                  placeholder="sample@gmail.com"
-                />
-              </div>
-              <div>
-                <label class="block mb-3 text-lg font-bold"
-                  >お問い合わせ内容</label
-                >
-                <textarea
-                  rows="5"
-                  class="w-full border border-inputBorder px-3 py-3 multi"
-                ></textarea>
-              </div>
-              <button
-                class="px-8 py-3 bg-main text-white font-bold rounded-lg hover:bg-purple-600 transition-all duration-300"
-              >
-                送信
-              </button>
-            </div>
+  <!-- Contact -->
+  <section id="contact"
+    class="container mt-32 mb-20 flex items-center mx-auto px-8 md:px-14 lg:px-24 w-full scroll-mt-16 xl:px-96">
+    <div class="w-full">
+      <h2 class="secondary-title">Contact</h2>
+      <div class="w-full">
+        <form class="space-y-7" method="POST" data-netlify="true">
+          <div>
+            <label class="block mb-3 text-lg font-bold">お名前 (必須)</label>
+            <input type="text"
+              class="w-full border border-inputBorder px-3 py-3" placeholder="山田 花子" required />
           </div>
-        </section>
+          <div>
+            <label class="block mb-3 text-lg font-bold">メールアドレス (必須)</label>
+            <input type="text"
+              class="w-full border border-inputBorder px-3 py-3" placeholder="sample@gmail.com" required />
+          </div>
+          <div>
+            <label class="block mb-3 text-lg font-bold">お問い合わせ内容 (必須)</label>
+            <textarea rows="5" class="w-full border border-inputBorder px-3 py-3" required></textarea>
+          </div>
+          <button
+            class="px-8 py-3 bg-main text-white font-bold rounded-lg" 
+            type="submit">
+            送信
+          </button>
+        </form>
       </div>
-    </main>
-  </body>
+    </div>
+  </section>
+
+  <script>
+    // モバイルメニューの開閉処理
+    const menuButton = document.getElementById("menu-button");
+    const closeButton = document.getElementById("close-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuButton.addEventListener("click", () => {
+      mobileMenu.classList.remove("translate-x-full");
+      mobileMenu.classList.add("translate-x-0");
+    });
+
+    closeButton.addEventListener("click", () => {
+      mobileMenu.classList.remove("translate-x-0");
+      mobileMenu.classList.add("translate-x-full");
+    });
+  </script>
+</body>
+
 </html>
